@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Özür Dilerim, Işılay</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #fceabb, #f8b500);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #3a1a00;
+      margin: 0;
+      padding: 20px;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      max-width: 600px;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+      color: #d35400;
+    }
+
+    p {
+      font-size: 1.3rem;
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #7a4a00;
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 24px;
+      color: #e74c3c;
+      animation: float 5s ease-in-out infinite;
+      user-select: none;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(15deg); }
+    }
+
+    /* YouTube player'ı gizle */
+    .youtube-player {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Ana içerik -->
+<div class="container">
+  <h1>Sevgili Işılay, Özür Dilerim</h1>
+  <p>
+    Bebeğim seni kırmak beni bu dünyada en kötü etkileyen şey<br>
+    seni üzmek içime bi kılıcın girmesiyle eş değer<br>
+    gözünden düşen bir damla benim ölümüm gibi<br>
+    hata yaptım yalana başvurdum evet haklısın<br>
+    hemen sindireceksin de demiyorum<br>
+    ama ben seni yaşamaktan çok seviyorum<br>
+    ölümden çok seviyorum<br>
+    her andan her şeyden çok seviyorum seni.
+  </p>
+  <footer>Kalbim hep seninle, Mehmet Ali</footer>
+</div>
+
+<!-- YouTube şarkı (gizli çalar) -->
+<iframe class="youtube-player"
+        src="https://www.youtube.com/embed/z8QaeUbsIR8?autoplay=1&loop=1&playlist=z8QaeUbsIR8"
+        allow="autoplay"
+        frameborder="0">
+</iframe>
+
+<!-- 50 Kalpli Süsleme -->
+<script>
+  const heartEmojis = ['❤', '💖', '💕', '💗', '💝'];
+  const body = document.body;
+
+  for(let i = 0; i < 50; i++) {
+    const heart = document.createElement('span');
+    heart.classList.add('heart');
+    heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+    heart.style.top = Math.random() * 90 + '%';
+    heart.style.left = Math.random() * 90 + '%';
+    heart.style.fontSize = (16 + Math.random() * 20) + 'px';
+    heart.style.animationDelay = (Math.random() * 5) + 's';
+    heart.style.animationDuration = (4 + Math.random() * 3) + 's';
+    body.appendChild(heart);
+  }
+</script>
+
+<audio autoplay loop>
+  <source src="siire-gazele.mp3" type="audio/mpeg" />
+  Tarayıcınız ses çalmayı desteklemiyor.
+</audio>
+</body>
+</html>
